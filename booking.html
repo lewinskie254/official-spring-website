@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Spring of Wholeness</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+          <div class="logo">Spring of Wholeness</div>
+      </a>
+      <div class="hamBtn">
+          <button class="navToggle"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#238db5"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g clip-path="url(#clip0_429_11066)"> <path d="M3 6.00092H21M3 12.0009H21M3 18.0009H21" stroke="#238db5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> </g> <defs> <clipPath id="clip0_429_11066"> <rect width="24" height="24" fill="white" transform="translate(0 0.000915527)"></rect> </clipPath> </defs> </g></svg></button>
+      </div>
+      <nav class="navBar" data-visible="false">
+          <a href="index.html">Home <span class="nav-icon">&#8599</span></a>
+          <a href="about.html">About Us <span class="nav-icon">&#8599</span></a>
+          <a href="contact.html">Contact <span class="nav-icon">&#8599</span></a>
+      </nav>
+      
+  </header>
+
+    <!-- carousel -->
+    <div class="carousel">
+
+         <section class="call-section">
+            <div class="call-container">
+              <form class="form">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter Your Name">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your Email">
+                <label for="phone">Phone</label>
+                <input type="tel" name="phone" id="phone" placeholder="Enter your Phone Number">
+                <label for="date">Date</label>
+                <input type="date" name="date" id="date">
+                <button type="button" id="formBtn">Book Session &#8599</button>
+            </form>
+        
+            <script>
+                document.getElementById('formBtn').addEventListener('click', function() {
+                    var nameValue = document.getElementById('name').value;
+                    var emailValue = document.getElementById('email').value;
+                    var phoneValue = document.getElementById('phone').value;
+                    var dateValue = document.getElementById('date').value;
+        
+                    console.log('Name:', nameValue);
+                    console.log('Email:', emailValue);
+                    console.log('Phone:', phoneValue);
+                    console.log('Date:', dateValue);
+
+                    Email.send({
+                    Host: 'smtp.elasticemail.com',
+                    Username: 'regina.mwabila@springofwholeness.com',
+                    Password: '03B55E44E7DBB41B71F16520BF1DAB7BE8E0',
+                    To: 'regina.mwabila@springofwholeness.com',
+                    From: `regina.mwabila@springofwholeness.com`,
+                    Subject: 'Booking',
+                    // Use <br> for line breaks in the email body
+                    Body: `Name: ${nameValue}<br>email: ${emailValue} <br>Phone: ${phoneValue}<br>Date: ${dateValue} `,
+                    }).then((message) => alert(message))
+                    document.querySelector('.form').reset();
+                });
+            </script>
+            
+          </div>
+         </section>
+
+   
+    <div class="arrows">
+        
+    </div>
+
+</div>
+<script src="script.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+</body>
+</html>
