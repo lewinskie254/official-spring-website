@@ -165,7 +165,7 @@ header .logo {
 .carousel {
   margin-top: -50px;
   height: 100vh;
-  overflow: auto;
+  overflow: hidden;
   position: relative;
   z-index: 0;
 }
@@ -749,5 +749,8 @@ form input::placeholder, input{
   }
   .arrows {
     bottom: 1rem;
+  }
+  .testing{
+    height: 100vh;
   }
 }
