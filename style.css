@@ -716,6 +716,7 @@ form input::placeholder, input{
 
   .carousel .list {
     height: 100%;
+    overflow: auto;
   }
 
   .carousel .list .item .intro {
