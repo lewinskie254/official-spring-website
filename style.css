@@ -744,8 +744,6 @@ form input::placeholder, input{
 
   .carousel.carousel.showDetail .list .item .detail .des {
     height: 100px;
-    overflow-y: auto;
-    overflow-x: hidden;
   }
 
   .carousel.carousel.showDetail .list .item .detail .checkout {
