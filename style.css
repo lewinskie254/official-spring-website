@@ -108,7 +108,7 @@ header {
   header nav a{
     margin-bottom: 2rem;
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 700;
     border-bottom: 4px solid var(--text-blue);
     width: 50%;
@@ -134,6 +134,7 @@ header {
     display: block;
     color: var(--text-gold);
     margin-left: 1rem;
+
   }
 
   header button svg{
@@ -703,6 +704,7 @@ form input::placeholder, input{
 
 @media screen and (max-width: 780px) {
   /* mobile  */
+
   .carousel .list .item {
     width: 100%;
     font-size: 10px;
@@ -710,12 +712,18 @@ form input::placeholder, input{
   .carousel {
     height: 600px;
   }
-
+  .testing{
+    height: 100vh;
+    overflow: hidden;
+  }
   .carousel .list {
     height: 100%;
     
   }
 
+  .arrows {
+    margin-bottom: -2rem;
+  }
   .carousel .list .item .intro {
     width: 50%;
   }
