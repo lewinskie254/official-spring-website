@@ -708,7 +708,7 @@ form input::placeholder, input{
     font-size: 10px;
   }
   .carousel {
-    height: 100vh;
+    height: 600px;
   }
 
   .carousel .list {
