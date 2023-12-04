@@ -82,6 +82,9 @@ header {
 
 
 @media (max-width: 35em) {
+  header {
+    width: 100vw;
+  }
   header nav {
     position: fixed;
     inset: 0 0 0 40%;
@@ -749,5 +752,9 @@ form input::placeholder, input{
   }
   .arrows {
     bottom: 1rem;
+    width: 100vw;
+  }
+  .carousel .list{
+    width: 100vw;
   }
 }
