@@ -168,7 +168,6 @@ header .logo {
 .carousel {
   margin-top: -50px;
   height: 100vh;
-  overflow: hidden;
   position: relative;
   z-index: 0;
 }
@@ -607,7 +606,6 @@ header .logo {
     overflow: auto;
     background-color: transparent;
     border-radius: 1rem;
-    overflow: auto;
 }
 
 .call-container{
@@ -712,7 +710,7 @@ form input::placeholder, input{
   }
   .carousel {
     height: 600px;
-    overflow-x: auto;
+    overflow-y: auto;
   }
 
   .carousel .list {
