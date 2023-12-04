@@ -603,7 +603,6 @@ header .logo {
     margin-left: calc(50vw - 170px);
     margin-top: calc(50vh - 300px);
     max-width: 350px;
-    overflow: auto;
     background-color: transparent;
     border-radius: 1rem;
 }
@@ -709,8 +708,7 @@ form input::placeholder, input{
     font-size: 10px;
   }
   .carousel {
-    height: 600px;
-    overflow-y: auto;
+    height: 100vh;
   }
 
   .carousel .list {
