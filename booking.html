@@ -38,32 +38,13 @@
                 <input type="date" name="date" id="date">
                 <button type="button" id="formBtn">Book Session &#8599</button>
             </form>
-        
-            <script>
-                document.getElementById('formBtn').addEventListener('click', function() {
-                    var nameValue = document.getElementById('name').value;
-                    var emailValue = document.getElementById('email').value;
-                    var phoneValue = document.getElementById('phone').value;
-                    var dateValue = document.getElementById('date').value;
-        
-                    console.log('Name:', nameValue);
-                    console.log('Email:', emailValue);
-                    console.log('Phone:', phoneValue);
-                    console.log('Date:', dateValue);
-
-                    Email.send({
-                    Host: 'smtp.elasticemail.com',
-                    Username: 'regina.mwabila@springofwholeness.com',
-                    Password: '03B55E44E7DBB41B71F16520BF1DAB7BE8E0',
-                    To: 'regina.mwabila@springofwholeness.com',
-                    From: `regina.mwabila@springofwholeness.com`,
-                    Subject: 'Booking',
-                    // Use <br> for line breaks in the email body
-                    Body: `Name: ${nameValue}<br>email: ${emailValue} <br>Phone: ${phoneValue}<br>Date: ${dateValue} `,
-                    }).then((message) => alert(message))
-                    document.querySelector('.form').reset();
-                });
-            </script>
+            <div class="sects">
+                
+              <a href="index.html">
+                  <button id="homeBtn">Go Back Home &#8599</button>
+             </a>
+          </div>
+           
             
           </div>
          </section>
@@ -75,7 +56,47 @@
 
 </div>
 <script src="script.js"></script>
+<script>
+  document.getElementById('formBtn').addEventListener('click', function() {
+      var nameValue = document.getElementById('name').value;
+      var emailValue = document.getElementById('email').value;
+      var phoneValue = document.getElementById('phone').value;
+      var dateValue = document.getElementById('date').value;
+
+      if (!nameValue)
+      {
+        alert('Please provide name')
+      }
+      else if(!emailValue)
+      {
+        alert('Please provide email')
+      }
+      else if(!phoneValue)
+      {
+        alert('Please provide your phone number')
+      }
+      else if (!dateValue)
+      {
+        alert('Please Select a Date')
+      }
+      else
+      {
+        Email.send({
+        Host: 'smtp.elasticemail.com',
+        Username: 'regina.mwabila@springofwholeness.com',
+        Password: '03B55E44E7DBB41B71F16520BF1DAB7BE8E0',
+        To: 'regina.mwabila@springofwholeness.com',
+        From: `regina.mwabila@springofwholeness.com`,
+        Subject: 'Booking',
+        // Use <br> for line breaks in the email body
+        Body: `Name: ${nameValue}<br>email: ${emailValue} <br>Phone: ${phoneValue}<br>Date: ${dateValue} `,
+        }).then((message) => alert(message))
+        document.querySelector('.form').reset();
+      }
+  });
+</script>
 <script src="https://smtpjs.com/v3/smtp.js">
+
 </script>
 </body>
 </html>
