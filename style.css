@@ -604,6 +604,7 @@ header .logo {
     overflow: auto;
     background-color: transparent;
     border-radius: 1rem;
+    overflow: auto;
 }
 
 .call-container{
@@ -656,6 +657,7 @@ header .logo {
 form{
   display: flex;
   flex-direction: column;
+  overflow: auto;
 }
 
 #formBtn{
