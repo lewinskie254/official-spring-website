@@ -712,11 +712,12 @@ form input::placeholder, input{
   }
   .carousel {
     height: 600px;
+    overflow-x: auto;
   }
 
   .carousel .list {
     height: 100%;
-    overflow: auto;
+    
   }
 
   .carousel .list .item .intro {
