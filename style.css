@@ -200,6 +200,11 @@ header .logo {
 
 .item-image img {
   width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  max-height: 350px;
+  object-fit: cover;
+  box-shadow: 10px 10px 10px 5px rgba(38, 38, 38, 0.5);
 }
 
 .carousel .list .item .detail {
