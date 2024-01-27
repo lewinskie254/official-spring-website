@@ -200,6 +200,11 @@ header .logo {
 
 .item-image img {
   width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  max-height: 350px;
+  object-fit: cover;
+  box-shadow: 10px 10px 10px 5px rgba(38, 38, 38, 0.5);
 }
 
 .carousel .list .item .detail {
@@ -312,10 +317,12 @@ header .logo {
   margin-bottom: 1.5rem;
   line-height: 1em;
   color: var(--text-gold);
+  max-width: 90%;
 }
 
 .carousel .list .item .intro .des {
   font-size: small;
+  max-width: 90%;
 }
 
 .carousel .list .item .intro .seeMore {
